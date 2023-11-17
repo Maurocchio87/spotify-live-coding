@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* GENERAL */
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#wrapper{
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+aside{
+    width: 200px;
+}
+main{
+    width: calc(100% - 200px);
+    height: 100%;
+}
+
+header{
+    width: calc(100% - 200px);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+#music{
+    padding: 80px 10px 0;
+    height: 100%;
+    overflow: auto;
+}
+
+/* NAV */
+#music > nav > ul{
+    display: flex;
+    justify-content: center;
+}
+
+#music > nav > ul > li{
+    margin: 0 10px;
+}
+
+/* MUSIC */
+.my-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -10px 0;
+}
+
+.card{
+    width: calc((100% / 6) - 20px);
+    padding: 10px;
+    margin: 0 10px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1100px) {
+    .card{
+        width: calc((100% / 4) - 20px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .card{
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media screen and (max-width:600px) {
+    aside{
+        width: 80px;
+    }
+    main,
+    header{
+        width: calc(100% - 80px);
+    }
+}
+
+
+/* DEBUG */
+footer{
+    background-color: salmon;
+}
+#wrapper{
+    background-color: blueviolet;
+}
+#wrapper > aside,
+#wrapper > main{
+    border: 2px dashed green;
+}
+.card{
+    background-color: yellow;
+}
+.debug footer > *{
+    background-color: brown;
+}
